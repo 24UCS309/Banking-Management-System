@@ -2,18 +2,34 @@
 
 ## 📌 Overview
 
-This is a **basic console-based Banking Management System** developed using **C++**.
+This is a **console-based Banking Management System** developed using **C++**.
 
-It performs simple banking operations like creating accounts, depositing money, and displaying account details.
+The system allows users to perform banking operations with **role-based access**:
+
+* 👨‍💼 Admin
+* 👤 Customer
+
+It uses **vector (dynamic array)** to store account records and provides secure operations using **PIN verification**.
 
 ---
 
 ## 🚀 Features
 
-* Create new bank account
-* Deposit money
-* Search account by account number
-* Display all account records
+### 👨‍💼 Admin
+
+* 🆕 Open new bank account
+* 🔍 View account details
+* 💰 Deposit money
+* 💸 Withdraw money
+* ✏️ Edit account details
+* ❌ Delete account
+
+### 👤 Customer
+
+* 🆕 Create account
+* 🔍 View own account (with PIN)
+* 💰 Deposit money
+* 💸 Withdraw money
 
 ---
 
@@ -23,8 +39,19 @@ It performs simple banking operations like creating accounts, depositing money, 
 * **Concepts Used:**
 
   * Object-Oriented Programming (OOP)
-  * Linked List
-  * Classes & Objects
+  * Encapsulation
+  * STL (vector)
+  * Functions
+  * Menu-driven programming
+
+---
+
+## 🧠 Data Structure Used
+
+* **Vector (Dynamic Array)**
+
+  * Stores multiple bank accounts
+  * Supports dynamic resizing
 
 ---
 
@@ -40,7 +67,7 @@ BANKING_SYSTEM/
 
 ## ⚙️ How to Run
 
-### Using Terminal
+### 💻 Using Terminal (GCC)
 
 ```bash id="cmd1"
 g++ main.cpp -o bank
@@ -52,27 +79,72 @@ g++ main.cpp -o bank
 
 ---
 
-## 🧪 Sample Output
+## 🧪 Program Flow
 
-```id="output"
-Account created successfully!
-
---- Account Records ---
-ID: 101 | Name: Alice | Balance: 500
-
-Deposited 250. New Balance: 750
+```id="flow"
+1. Select Role (Admin / Customer)
+2. Perform operations based on role
+3. Use Back option to return to main menu
+4. Exit program
 ```
 
 ---
 
-## ⚠️ Notes
+## 🧾 Sample Menu
 
-* This is a basic project
-* Data is stored temporarily (no file storage)
-* Uses linked list for managing accounts
+```id="menu"
+===== MAIN MENU =====
+1. Admin
+2. Customer
+3. Exit
+
+--- ADMIN MENU ---
+1. Open Account
+2. View Account
+3. Deposit
+4. Withdraw
+5. Edit Account
+6. Delete Account
+7. Back
+
+--- CUSTOMER MENU ---
+1. Create Account
+2. View Account
+3. Deposit
+4. Withdraw
+5. Back
+```
+
+---
+
+## 🔐 Security
+
+* PIN verification is required for account access
+* Prevents unauthorized operations
+
+---
+
+## ⚠️ Important Notes
+
+* Data is stored temporarily (no database/file storage)
+* Account number is auto-generated
+* Console-based application
+
+---
+
+## 📈 Future Improvements
+
+* 💾 File handling for permanent storage
+* 🔐 Login system (Admin & Customer)
+* 💸 Transfer money feature
+* 🖥️ GUI version
 
 ---
 
 ## 👩‍💻 Author
 
-Your Name
+**Your Name**
+
+---
+
+⭐ If you like this project, give it a star on GitHub!
